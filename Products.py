@@ -95,7 +95,7 @@ else:
         merge2 = merge2[["Variant SKU", "Title", "Variant Inventory Qty"]]
         merge2 = pd.concat([prev_checked, previous_df])
         merge2.drop_duplicates(subset=['Variant SKU', 'Title'], keep="first", inplace=True)
-        merge2.to_csv(os.path.join('C:\Users\ymoh\Desktop\Voltaat_product_replicas\','prev_checked.csv'))
+        merge2.to_csv(os.path.join('/Users/ymoh/Desktop/Voltaat_product_replicas/','prev_checked.csv'))
 
     if st.button('Save', on_click=update_df):
         st.write('Saved!')
